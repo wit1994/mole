@@ -1,0 +1,121 @@
+#include <iostream>
+#include <stdlib.h>
+#include <Windows.h>
+#include <Time.h>
+
+#define TRUE 1
+using namespace std;
+
+/*int main()
+{
+int time;
+int re = 1;
+
+do
+{
+cout << "타이머입력" << endl;
+cin >> time;
+
+while (time > 0)
+{
+cout << time << "sec" << endl;
+Sleep(1000);
+time--;
+
+}
+cout << "re?" << endl;
+cin >> re;
+
+} while (re > 0);
+
+
+system("cls");
+
+do
+{
+cout << "타이머입력" << endl;
+cin >> time;
+
+while (time > 0)
+{
+cout << time << "sec" << endl;
+Sleep(1000);
+time--;
+
+}
+cout << "re?" << endl;
+cin >> re;
+
+} while (re > 0);
+
+return 0;
+}
+*/
+void gotoxy(int x, int y) // 콘솔 화면 커서 이동
+{
+	COORD pos = { x,y };
+	SetConsoleCursorPosition(GetStdHandle(STD_OUTPUT_HANDLE), pos);
+
+}
+void setcolor(int color, int bgcolor) //콘솔 화면 글자 색 변경
+{
+	color &= 0xf;
+	bgcolor &= 0xf;
+
+	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), (bgcolor << 4) | color);
+}
+/*void mole()
+{
+	int j = 0;
+	for (int i = 0; i < 10; i++)
+	{
+		
+		gotoxy(i, j);
+		cout << " 0 "<< endl;
+
+	}
+}*/
+
+int main()
+{
+	/*int key = 0;
+	int random = 0;
+	int sec = 5;
+
+	srand((unsigned)time(NULL));
+
+	setcolor(10, 0);                //10 :초록
+
+	gotoxy(50, 13);
+	cout << "    두더지 잡기" << endl;
+	gotoxy(50, 14);
+	cout << "아무 키나 눌러 주세요" << endl;
+
+	cin >> key;
+	if (key >= 0 && key <= 127)
+	{
+		system("cls");
+		for (int i = 0; i < 5; i++) // 게임 5초 대기
+		{
+			setcolor(10, 0);                //10 :초록
+			gotoxy(60, 13);
+			cout << sec << endl;
+			sec--;
+			Sleep(1000);
+		}
+		system("cls");
+		sec = 60;
+		while (TRUE)
+		{
+			gotoxy(60, 5);
+			sec--;
+			Sleep(1000);
+		}
+	}
+	*/
+	mole();
+
+
+
+	return 0;
+}
