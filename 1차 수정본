@@ -64,17 +64,22 @@ void setcolor(int color, int bgcolor) //콘솔 화면 글자 색 변경
 
 	SetConsoleTextAttribute(GetStdHandle(STD_OUTPUT_HANDLE), (bgcolor << 4) | color);
 }
-/*void mole()
+void mole()
 {
-	int j = 0;
-	for (int i = 0; i < 10; i++)
+	int j = 10;
+	int a = 0;
+	for (int i = 0; i < 9; i++)
 	{
-		
-		gotoxy(i, j);
-		cout << " 0 "<< endl;
-
+		a += 20;
+		gotoxy(a, j);
+		cout << "(       )" << endl;
+		if (a % 3 == 0)
+		{
+			j+=3;
+			a=0;
+		}
 	}
-}*/
+}
 
 int main()
 {
@@ -114,6 +119,7 @@ int main()
 	}
 	*/
 	mole();
+
 
 
 
